@@ -1,0 +1,25 @@
+<mat-card style="margin: 10px; height: 86%" class="mat-elevation-z20">
+  <mat-card-content style="padding: 10px;">
+    <div class="row" style="width: 100%; font-size: large; margin-bottom: 10px">
+      <div class="col-6" style="text-align: center; border: dashed black;">
+        Date: {{todayDate}}
+      </div>
+      <div class="col-6" style="text-align: center; border: dashed black;">
+        Tithi: {{todayTithi}}
+      </div>
+    </div>
+    <div class="row" style="width: 100%">
+      <div class="col-6" *ngFor="let slide of slides"
+           style="text-align: center; padding: 10px">
+        <div class="row" style="font-size: large; margin-bottom: 10px"><b><u>{{slide.title}}</u></b></div>
+        <div class="row" style="font-size: x-large">
+          <div class="col-12" style="text-align: center; margin-bottom: 10px" *ngFor="let data of slide.data">
+            {{data.gujaratiName}}
+            <br>
+            <span style="font-size:x-small">{{data.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
